@@ -11,7 +11,7 @@ class MessagesControllerTest < ActionController::TestCase
   test "should create message" do
     assert_difference('Message.count') do
       # @request.headers["HTTP_REFERER"] = "http://example.com/home"
-      post :create, message: {text: 'Some content'}
+      post :create, message: {text: 'Some content', user: users(:nick)}
     end
 
     assert_redirected_to message_path(assigns(:message))

@@ -44,6 +44,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:text)
+    params.require(:message).permit(:text, :user)
   end
 end
